@@ -1,0 +1,26 @@
+[project]
+name = "img-video-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mario", email = "mrdevmario@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.141.1",
+    "fastapi-users[sqlalchemy]>=15.0.5",
+    "imagekitio>=5.9.0",
+    "uvicorn[standard]>=0.52.4",
+]
+
+[project.scripts]
+img-video-app = "img_video_app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff.lint]
+ignore = ["B008"]
